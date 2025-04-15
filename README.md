@@ -1,66 +1,66 @@
-### 📚 داکیومنت کاربرد `IHostedService` در ASP.NET Core
+### 📚 Documentation `ihostedservice 'in ASP.NET Core
 
-`IHostedService` یک رابط در ASP.NET Core است که به شما امکان مدیریت وظایف پس‌زمینه (Background Tasks) را می‌دهد. این ویژگی در سناریوهای مختلف کاربرد دارد:
-
----
-
-### 1️⃣ **اجرای وظایف دوره‌ای**
-- اجرای وظایفی که به صورت دوره‌ای (هر دقیقه، ساعت یا روز) باید انجام شوند.
-- مثال: جمع‌آوری داده‌ها، پاک‌سازی منابع، ارسال اعلان‌ها.
+`Ihostedservice 'is an interface in ASP.NET Core that allows you to manage your background tasks.  This feature is used in different scenarios:
 
 ---
 
-### 2️⃣ **پردازش صف‌ها**
-- مدیریت صف‌های پیام‌ها یا رویدادها، مانند RabbitMQ، Kafka یا Azure Service Bus.
-- مثال: پردازش درخواست‌های زیاد که نیاز به زمان‌بندی خاصی دارند.
+### 1- ** Periodic Tasks **
+- Performing tasks that must be performed periodically (every minute, hour or day).
+- Example: Data collection, resource clearance, submission of notifications.
 
 ---
 
-### 3️⃣ **اجرای وظایف طولانی‌مدت**
-- اجرای وظایفی که نیاز به زمان زیادی برای اتمام دارند.
-- مثال: پردازش تصاویر/ویدئوها، محاسبات سنگین، تحلیل داده‌ها.
+### 2- ** Queves processing **
+- Manage queues of messages or events, such as Rabbitmq, Kafka or Azure Service Bus.
+- Example: Processing many requests that require specific timing.
 
 ---
 
-### 4️⃣ **مدیریت اتصالات بلندمدت**
-- مدیریت اتصالات WebSocket برای ارتباط بلادرنگ با کاربران.
-- مثال: پایش وضعیت سرورها یا خدمات خارجی.
+### 3- ** Implement long -term tasks **
+- Implementation of tasks that need a lot of time to finish.
+- Example: Pictures/videos processing, heavy calculations, data analysis.
 
 ---
 
-### 5️⃣ **اجرای وظایف در زمان راه‌اندازی**
-- اجرای وظایف خاصی هنگام راه‌اندازی برنامه.
-- مثال: مهاجرت دیتابیس، بارگذاری تنظیمات.
+### 4- ** Long -term fitting management **
+- Managing WebSocket Connectors for real -time communication with users.
+- Example: Monitoring the status of external servers or services.
 
 ---
 
-### 6️⃣ **نظارت و لاگ‌گیری**
-- نظارت بر منابع سیستم (CPU، RAM، دیسک).
-- مثال: ثبت لاگ‌های دوره‌ای برای ذخیره‌سازی اطلاعات مهم.
+### 5- ** Implementation of tasks at the time of launch **
+- Implementation of specific tasks when launching the program.
+- Example: Database migration, upload settings.
 
 ---
 
-### 7️⃣ **اجرای وظایف موازی**
-- اجرای چندین وظیفه پس‌زمینه به طور همزمان.
-- مثال: وظایف مستقل یا وظایف با تعامل.
+### 6- ** Supervision and logging **
+- Supervision of system resources (CPU, RAM, disk).
+- Example: Register periodic logs for storing important information.
 
 ---
 
-### 8️⃣ **پیاده‌سازی Cache Refresh**
-- به‌روزرسانی دوره‌ای داده‌های کش (Cache) برای حفظ دقت اطلاعات.
+### 7- ** Implementation of parallel tasks **
+- Perform several background tasks simultaneously.
+- Example: Independent tasks or tasks with interaction.
 
 ---
 
-### 9️⃣ **اجرای وظایف با Hangfire یا Quartz.NET**
-- استفاده از کتابخانه‌هایی مانند Hangfire یا Quartz.NET برای زمان‌بندی دقیق‌تر وظایف.
+### 8- ** Cache Refresh **
+- Periodic update of cache data to maintain information accuracy.
 
 ---
 
-### 🔟 **مدیریت وظایف مرتبط با امنیت**
-- بررسی دسترسی‌ها و اعتبارسنجی کاربران.
-- مثال: شناسایی فعالیت‌های مشکوک در سیستم.
+### 9- ** Implementation of tasks with Hangfire or Quartz.net **
+- Use libraries like Hangfire or Quartz.net for more accurate tasks.
 
 ---
 
-### 🎯 **نتیجه‌گیری**
-`IHostedService` یک ابزار انعطاف‌پذیر برای مدیریت وظایف پس‌زمینه است که در سناریوهای مختلفی مانند اجرای وظایف دوره‌ای، پردازش صف‌ها، مدیریت اتصالات بلندمدت و نظارت بر سیستم کاربرد دارد. با رعایت اصول طراحی و مدیریت منابع، می‌توانید از این رابط به بهترین شکل استفاده کنید.
+### 🔟 ** Management Related Duties **
+- Review of users' access and validation.
+- Example: Identify suspicious activities in the system.
+
+---
+
+### 🎯 ** Conclusion **
+`Ihostedservice" is a flexible tool for managing background tasks that is used in various scenarios such as periodic tasks, queues processing, long -term fitting management and system monitoring.  By following the principles of resource design and management, you can make the most of this interface.
